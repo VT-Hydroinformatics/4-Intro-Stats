@@ -251,11 +251,11 @@ Which one is more skewed?
 ```{r}
 quantsP <- quantile(pineQ$cfs)
 
-((quantsP[3]-quantsP[2]) - (quantsP[2] - quantsP[1])) / quantsP[3] - quantsP[1]
+((quantsP[3]-quantsP[2]) - (quantsP[2] - quantsP[1])) / (quantsP[3] - quantsP[1])
 
 quantsX <- quantile(ExNorm$value)
 
-((quantsX[3]-quantsX[2]) - (quantsX[2] - quantsX[1])) / quantsX[3] - quantsX[1]
+((quantsX[3]-quantsX[2]) - (quantsX[2] - quantsX[1])) / (quantsX[3] - quantsX[1])
 ```
 
 ## What is a normal distribution and how can we determine if we have one?
