@@ -5,6 +5,26 @@ format:
     self-contained: true
 ---
 
+---
+title: "Chapter 4: Intro to Basic Stats"
+date: today
+github: https://github.com/VT-Hydroinformatics/4-Intro-Stats
+author:
+  - name: JP Gannon
+    orcid: 0000-0002-4595-3214
+    github: jpgannon
+    url: https://jpgannon.github.io/
+    affiliation: 
+      - name: Virginia Tech
+        url: https://www.vt.edu/
+format:
+  html: 
+    self-contained: true
+  ipynb:
+      nb-frontmatter: true
+execute: 
+  enabled: true
+
 # Introduction to Basic Statistics {#stats}
 
 ```{r}
