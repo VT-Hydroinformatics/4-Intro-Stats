@@ -1,11 +1,4 @@
 ---
-title: "Intro to Basic Stats"
-format:
-  html: 
-    self-contained: true
----
-
----
 title: "Chapter 4: Intro to Basic Stats"
 date: today
 github: https://github.com/VT-Hydroinformatics/4-Intro-Stats
@@ -24,6 +17,7 @@ format:
       nb-frontmatter: true
 execute: 
   enabled: true
+---
 
 # Introduction to Basic Statistics {#stats}
 
