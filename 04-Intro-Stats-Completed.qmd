@@ -201,19 +201,19 @@ Measures of variability allow us to measure the width of our sample data histogr
 
 We will explore four measures of variability:
 
-#### Variance:
+### Variance:
 
 Sum of the squared difference of each value from the mean divided by the number of samples minus 1. var()
 
 ![Formula for variance (from USGS statistics book linked)](images/Screen Shot 2021-01-25 at 10.29.45 AM.png)(<https://pubs.usgs.gov/tm/04/a03/tm4a3.pdf>) source: <https://pubs.usgs.gov/tm/04/a03/tm4a3.pdf>
 
-#### Standard deviation:
+### Standard deviation:
 
 The square root of the variance sd()
 
 \*\*Both variance and standard deviation are sensitive to outliers.
 
-#### CV: Coefficient of Variation
+### CV: Coefficient of Variation
 
 CV is simply the standard deviation divided by the mean of the data. Because you divide by the mean, CV is dimensionless. This allows you to use it to compare the variation in samples with very different magnitudes.
 
@@ -254,7 +254,7 @@ quants <- quantile(pineQ$cfs)
 quants[4] - quants[2]
 ```
 
-#### What about how lopsided the distribution is?
+### What about how lopsided the distribution is?
 
 There are several ways to measure this as well, but we are just going to look at one: The Quartile skew. The quartile skew is the difference between the upper quartiles (50th-75th) and the lower quartiles (25th-50th) divided by the IQR (75th-25th).
 
