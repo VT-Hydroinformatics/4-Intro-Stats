@@ -63,7 +63,7 @@ ExNorm |>
 #Let's generate a plot that makes comparing these two easier
 ```
 
-### Stack plots to compare histogram and pdf
+**Stack plots to compare histogram and pdf**
 
 We will save each plot as ggplot object and then output them using the patchwork package (loaded in the setup chunk).
 
@@ -167,7 +167,7 @@ PineP <- pineQ |> ggplot(aes(cfs)) +
 Ex / PineP  
 ```
 
-### So what's a weighted average?
+**So what's a weighted average?**
 
 When you compute a standard mean or median, you are giving equal weight to each measurement. Adding up all the values in a sample and dividing by the number of samples is the same as multiplying each value by 1/\# of samples. For instance if you had ten samples, to calculate the mean you would add them up and divide by 10. This is the same as multiplying each value by 1/10 and then adding them up. Each value is equally weighted at 1/10.
 
