@@ -176,7 +176,9 @@ Another example is precipitation gages. In the image below, you see there are 5 
 
 In the weighted situation, we find the average by multiplying each precipitation values by the proportion of the watershed it represents, shown by the Thiessen polygons, and then add them all together. Let's do an example.
 
-![Different types of area averaging](images/theissen.png "Different types of area averaging")source: [https://edx.hydrolearn.org/assets/courseware/v1/e5dc65098f1e8c5faacae0e171e28ccf/asset-v1:HydroLearn+HydroLearn401+2019_S2+type\@asset+block/l2_image004.png](https://edx.hydrolearn.org/assets/courseware/v1/e5dc65098f1e8c5faacae0e171e28ccf/asset-v1:HydroLearn+HydroLearn401+2019_S2+type@asset+block/l2_image004.png){.uri}
+![Different types of area averaging](images/theissen.png "Different types of area averaging")\
+Different types of area averaging\
+source: [https://edx.hydrolearn.org/assets/courseware/v1/e5dc65098f1e8c5faacae0e171e28ccf/asset-v1:HydroLearn+HydroLearn401+2019_S2+type\@asset+block/l2_image004.png](https://edx.hydrolearn.org/assets/courseware/v1/e5dc65098f1e8c5faacae0e171e28ccf/asset-v1:HydroLearn+HydroLearn401+2019_S2+type@asset+block/l2_image004.png){.uri}
 
 The precip values for the watershed above are 4.5, 5.5, 5.8, 4.7, and 3.0
 
@@ -204,7 +206,9 @@ We will explore four measures of variability:
 
 Sum of the squared difference of each value from the mean divided by the number of samples minus 1. var()
 
-![Formula for variance (from USGS statistics book linked)](images/Screen Shot 2021-01-25 at 10.29.45 AM.png)(<https://pubs.usgs.gov/tm/04/a03/tm4a3.pdf>) source: <https://pubs.usgs.gov/tm/04/a03/tm4a3.pdf>
+![Formula for variance (from USGS statistics book linked)](images/Screen Shot 2021-01-25 at 10.29.45 AM.png)\
+Formula for variance (from USGS statistics book linked: <https://pubs.usgs.gov/tm/04/a03/tm4a3.pdf>\ 
+source: <https://pubs.usgs.gov/tm/04/a03/tm4a3.pdf>
 
 ### Standard deviation:
 
@@ -257,7 +261,9 @@ quants[4] - quants[2]
 
 There are several ways to measure this as well, but we are just going to look at one: The Quartile skew. The quartile skew is the difference between the upper quartiles (50th-75th) and the lower quartiles (25th-50th) divided by the IQR (75th-25th).
 
-![Quartile skew from USGS Stats Book linked above](images/Screen Shot 2021-01-25 at 11.27.14 AM.png) source: <https://pubs.usgs.gov/tm/04/a03/tm4a3.pdf>
+![Quartile skew from USGS Stats Book linked above](images/Screen Shot 2021-01-25 at 11.27.14 AM.png)\
+Quartile skew from USGS Stats Book linked above\
+source: <https://pubs.usgs.gov/tm/04/a03/tm4a3.pdf>
 
 Let's look at the quartile skew of the two distributions we've been measuring. Calculate it for the pineQ discharge data and the random normal distribution we generated.
 
