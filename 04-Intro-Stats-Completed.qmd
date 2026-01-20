@@ -1,11 +1,26 @@
 ---
-title: "Intro to Basic Stats"
+title: "Chapter 4: Intro to Basic Stats"
+date: today
+author:
+  - name: JP Gannon
+    orcid: 0000-0002-4595-3214
+    url: https://jpgannon.github.io/
+    affiliation: 
+      - name: Virginia Tech
+        url: https://www.vt.edu/
 format:
   html: 
     self-contained: true
+  ipynb:
+    nb-frontmatter: true
+    jupyter:
+      kernel: ir
+      ipynb-shell-interactivity: all
+execute: 
+  enabled: true
 ---
 
-# Introduction to Basic Statistics {#stats}
+# Introduction to Basic Statistics
 
 ```{r}
 
@@ -47,7 +62,7 @@ ExNorm |>
 #Let's generate a plot that makes comparing these two easier
 ```
 
-### Stack plots to compare histogram and pdf
+**Stack plots to compare histogram and pdf**
 
 We will save each plot as ggplot object and then output them using the patchwork package (loaded in the setup chunk).
 
@@ -151,7 +166,7 @@ PineP <- pineQ |> ggplot(aes(cfs)) +
 Ex / PineP  
 ```
 
-### So what's a weighted average?
+**So what's a weighted average?**
 
 When you compute a standard mean or median, you are giving equal weight to each measurement. Adding up all the values in a sample and dividing by the number of samples is the same as multiplying each value by 1/\# of samples. For instance if you had ten samples, to calculate the mean you would add them up and divide by 10. This is the same as multiplying each value by 1/10 and then adding them up. Each value is equally weighted at 1/10.
 
@@ -161,7 +176,10 @@ Another example is precipitation gages. In the image below, you see there are 5 
 
 In the weighted situation, we find the average by multiplying each precipitation values by the proportion of the watershed it represents, shown by the Thiessen polygons, and then add them all together. Let's do an example.
 
-![Different types of area averaging](images/theissen.png "Different types of area averaging")source: [https://edx.hydrolearn.org/assets/courseware/v1/e5dc65098f1e8c5faacae0e171e28ccf/asset-v1:HydroLearn+HydroLearn401+2019_S2+type\@asset+block/l2_image004.png](https://edx.hydrolearn.org/assets/courseware/v1/e5dc65098f1e8c5faacae0e171e28ccf/asset-v1:HydroLearn+HydroLearn401+2019_S2+type@asset+block/l2_image004.png){.uri}
+![](images/theissen.png "Different types of area averaging")
+
+_Different types of area averaging_\
+_source: [https://edx.hydrolearn.org/assets/courseware/v1/e5dc65098f1e8c5faacae0e171e28ccf/asset-v1:HydroLearn+HydroLearn401+2019_S2+type\@asset+block/l2_image004.png](https://edx.hydrolearn.org/assets/courseware/v1/e5dc65098f1e8c5faacae0e171e28ccf/asset-v1:HydroLearn+HydroLearn401+2019_S2+type@asset+block/l2_image004.png){.uri}_
 
 The precip values for the watershed above are 4.5, 5.5, 5.8, 4.7, and 3.0
 
@@ -185,19 +203,22 @@ Measures of variability allow us to measure the width of our sample data histogr
 
 We will explore four measures of variability:
 
-#### Variance:
+### Variance:
 
 Sum of the squared difference of each value from the mean divided by the number of samples minus 1. var()
 
-![Formula for variance (from USGS statistics book linked)](images/Screen Shot 2021-01-25 at 10.29.45 AM.png)(<https://pubs.usgs.gov/tm/04/a03/tm4a3.pdf>) source: <https://pubs.usgs.gov/tm/04/a03/tm4a3.pdf>
+![](images/Screen Shot 2021-01-25 at 10.29.45 AM.png)
 
-#### Standard deviation:
+_Formula for variance (from USGS statistics book linked: <https://pubs.usgs.gov/tm/04/a03/tm4a3.pdf>_\ 
+_source: <https://pubs.usgs.gov/tm/04/a03/tm4a3.pdf>_
+
+### Standard deviation:
 
 The square root of the variance sd()
 
 \*\*Both variance and standard deviation are sensitive to outliers.
 
-#### CV: Coefficient of Variation
+### CV: Coefficient of Variation
 
 CV is simply the standard deviation divided by the mean of the data. Because you divide by the mean, CV is dimensionless. This allows you to use it to compare the variation in samples with very different magnitudes.
 
@@ -238,11 +259,14 @@ quants <- quantile(pineQ$cfs)
 quants[4] - quants[2]
 ```
 
-#### What about how lopsided the distribution is?
+### What about how lopsided the distribution is?
 
 There are several ways to measure this as well, but we are just going to look at one: The Quartile skew. The quartile skew is the difference between the upper quartiles (50th-75th) and the lower quartiles (25th-50th) divided by the IQR (75th-25th).
 
-![Quartile skew from USGS Stats Book linked above](images/Screen Shot 2021-01-25 at 11.27.14 AM.png) source: <https://pubs.usgs.gov/tm/04/a03/tm4a3.pdf>
+![](images/Screen Shot 2021-01-25 at 11.27.14 AM.png)
+
+_Quartile skew from USGS Stats Book linked above_\
+_source: <https://pubs.usgs.gov/tm/04/a03/tm4a3.pdf>_
 
 Let's look at the quartile skew of the two distributions we've been measuring. Calculate it for the pineQ discharge data and the random normal distribution we generated.
 
