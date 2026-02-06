@@ -19,6 +19,9 @@ format:
 execute: 
   enabled: true
 ---
+The code and classroom notes for following along can be found at the following link
+
+<https://github.com/VT-Hydroinformatics/4-Intro-Stats>
 
 # Introduction to Basic Statistics
 
@@ -29,6 +32,8 @@ library(patchwork)
 
 theme_set(theme_classic())
 ```
+
+
 
 ## Reading for this section: Statistical Methods in Water Resources: Chapter 1
 
@@ -275,11 +280,11 @@ Which one is more skewed?
 ```{r}
 quantsP <- quantile(pineQ$cfs)
 
-((quantsP[3]-quantsP[2]) - (quantsP[2] - quantsP[1])) / (quantsP[3] - quantsP[1])
+((quantsP[4]-quantsP[3]) - (quantsP[3] - quantsP[2])) / (quantsP[4] - quantsP[2])
 
 quantsX <- quantile(ExNorm$value)
 
-((quantsX[3]-quantsX[2]) - (quantsX[2] - quantsX[1])) / (quantsX[3] - quantsX[1])
+((quantsX[4]-quantsX[3]) - (quantsX[3] - quantsX[2])) / (quantsX[4] - quantsX[2])
 ```
 
 ## What is a normal distribution and how can we determine if we have one?
