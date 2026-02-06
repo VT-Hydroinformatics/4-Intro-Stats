@@ -281,7 +281,9 @@ Which one is more skewed?
 quantsP <- quantile(pineQ$cfs)
 
 ((quantsP[4]-quantsP[3]) - (quantsP[3] - quantsP[2])) / (quantsP[4] - quantsP[2])
+```
 
+```{r}
 quantsX <- quantile(ExNorm$value)
 
 ((quantsX[4]-quantsX[3]) - (quantsX[3] - quantsX[2])) / (quantsX[4] - quantsX[2])
